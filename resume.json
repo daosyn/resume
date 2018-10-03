@@ -1,0 +1,109 @@
+{
+  "basics": {
+    "name": "Brandon Dao",
+    "label": "Software Developer",
+    "picture": "",
+    "email": "daosyn@gmail.com",
+    "phone": "(815) 608-7276",
+    "website": "https://daosyn.info",
+    "summary": "",
+    "location": {
+      "address": "736 Bode Circle",
+      "postalCode": "60169",
+      "city": "Hoffman Estates",
+      "countryCode": "US",
+      "region": "Illinois"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "daosyn",
+        "url": "https://twitter.com/daosyn"
+      },
+      {
+        "network": "GitHub",
+        "username": "daosyn",
+        "url": "https://github.com/daosyn"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Capital One",
+      "position": "Associate Software Engineer",
+      "website": "https://capitalone.com",
+      "startDate": "17 January 2017",
+      "endDate": "present",
+      "summary": "",
+      "highlights": [
+        "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
+        "Successfully won Techcrunch Disrupt",
+        "Optimized an algorithm that holds the current world record for Weisman Scores"
+      ]
+    },
+    {
+      "company": "Revature",
+      "position": "Software Developer",
+      "website": "https://revature.com",
+      "startDate": "10 October 2016",
+      "endDate": "present",
+      "summary": "",
+      "highlights": [
+        "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
+        "Successfully won Techcrunch Disrupt",
+        "Optimized an algorithm that holds the current world record for Weisman Scores"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Illinois at Urbana-Champaign",
+      "area": "Computer Engineering",
+      "studyType": "Bachelor of Science",
+      "startDate": "2011",
+      "endDate": "2015",
+      "courses": [
+        "ECE 411 - Computer Organization and Design",
+        "ECE 391 - Computer Systems Engineering",
+        "CS 463 - Computer Security II",
+        "CS 460 - Computer Security Lab",
+        "CS 225 - Data Structures"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Master",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Javascript"
+      ]
+    },
+    {
+      "name": "Compression",
+      "level": "Master",
+      "keywords": [
+        "Mpeg",
+        "MP4",
+        "GIF"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }
+  ]
+}
