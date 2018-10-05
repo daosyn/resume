@@ -24,12 +24,11 @@
       "position": "Associate Software Engineer",
       "website": "https://capitalone.com",
       "startDate": "2017-01-17",
-      "summary": "I joined at the start of the year as part of an Agile team that would deliver intent for co-branding partnerships with companies such as Costco Canada, General Motors, Union Plus, Bass Pro, and Cabela's. I technically started as a contractor in January and was hired as a full time associate six months later.",
+      "summary": "I joined at the start of the year as part of an Agile team that would deliver intent for co-branding partnerships with companies such as Costco Canada, General Motors, Union Plus, Bass Pro, and Cabela's. I technically started as a contractor in January and was hired as a full-time associate six months later.",
       "highlights": [
-        "Built microservices in Java with Spring Boot that listen RabbitMQ queues and later Kafka topics",
+        "Built microservices in Java with Spring Boot that listen to RabbitMQ queues and Kafka topics",
         "Developed for a web application using Node.js to build APIs that present data to a front end powered by Angular",
-        "Contributed to inner source projects while collaborating with Agile team to deliver main intent",
-        "Continually integrated via reviewed GitHub pull requests and deployed services through Jenkins onto AWS"
+        "Contributed to inner source projects while collaborating with Agile team to deliver main intent"
       ]
     },
     {
@@ -81,18 +80,13 @@
       ]
     },
     {
-      "name": "DevOps",
+      "name": "Tools",
       "keywords": [
+        "Git",
+        "Bash",
         "Jenkins",
         "Docker",
         "AWS"
-      ]
-    },
-    {
-      "name": "Command Line",
-      "keywords": [
-        "Git",
-        "Bash"
       ]
     },
     {
@@ -115,17 +109,21 @@
   "languages": [{
       "language": "English",
       "fluency": "native speaker"
-    },
-    {
-      "language": "Vietnamese",
-      "fluency": "elementary"
     }
   ],
   "interests": [{
-    "name": "Rubik's Cubes",
-    "keywords": [
-      "speedsolving",
-      "computer-generated solves"
-    ]
-  }]
+      "name": "Rubik's Cubes",
+      "keywords": [
+        "speedsolving",
+        "computer-generated solves"
+      ]
+    },
+    {
+      "name": "open authentication standards",
+      "keywords": [
+        "U2F",
+        "FIDO2"
+      ]
+    }
+  ]
 }
