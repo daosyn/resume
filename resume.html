@@ -1,652 +1,388 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-  <title>Brandon Dao</title>
-  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-  <style>body, html {
-  padding-top:2.5em;
-  margin:0;
-  background-color:#fafafa;
-}
-
-.note {
-  display:block;
-  position: absolute;
-  top:10px;
-  left:10px;
-
-  font-family: "Open Sans";
-  font-size: 0.6em;
-}
-
-.new {
-  background-color: #81C784;
-
-  border: 1px solid #757575;
-  padding: 1px;
-  border-radius: 4px;
-
-}
-
-/* Header */
-
-header {
-  width:100%;
-  vertical-align: middle;
-  text-align: center;
- 
-}
-
-.header-content {
-  display: inline-block;
-}
-
-.pic {
-  margin: 0 auto;
-  margin-top:-2.5em;
-  
-  border-radius:10em;
-  height:4em;
-  width:4em;
-  
-  border: 2px solid #e0e0e0;
-  transition : all 0.5s linear;
-  
-}
-
-@-webkit-keyframes wiggle {
-  0%   {
-    transform: rotate(0deg);
-  }
-  25%  {
-    transform: rotate(-30deg);
-  }
-  50%  {
-    transform: rotate(15deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.pic:hover {
-  /*Webkit fix*/
-  -webkit-transform: translateZ(0);
-  
-  cursor:pointer;
-  
-  -webkit-animation: wiggle 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-}
-
-.header-text {
-  margin-top:0.5em;
-  margin-left:1em;
-}
-
-header p {
-  text-align:center;
-  font-family: "Merriweather";
-  
-  margin:0;
-  
-  color: #212121;
-}
-
-.first-name {
-   font-size: 1.05em;
-}
-
-.subtitle {
-  font-family: "Merriweather";
-  padding-top:.3em;
-  font-size:0.55em;
-  font-weight:500;
-  color: #424242;
-}
-
-/* Information */
-
-.paper {
-  margin: 0 auto;
-  margin-bottom:1em;
-  
-  background-color:white;
-  width:60%;
-  
-  padding:0.5em 0 0.5em 0;
-  
-  border-top: 1px solid #e0e0e0;
-  border-left: 1px solid #e0e0e0;
-  border-right: 1px solid #e0e0e0;
-  border-bottom: 3px solid #e0e0e0;
-  border-radius:3px;
-}
-
-@media(max-width:992px) {
-  .paper {
-    width:80%;
-  }
-}
-
-/* Content Part */
-
-.content-wrapper {
-  padding-right:7.25%;
-}
-
-.content {
-  display:table;
-  width:100%;
-  
-  padding-top:1.5em;
-  
-  /*border-top: 1px solid #eeeeee;*/
-}
-
-.content:last-child {
-  margin-bottom: 2em;
-}
-
-body > div > article > div > section:last-child {
-  padding-bottom:1.5em;
-}
-
-.row {
-    display:table-row;
-}
-.row div {
-    display:table-cell;
-}
-
-.content-cat {
-  font-family: "Merriweather";
-  font-variant:small-caps;
-  font-weight:300;
-  letter-spacing: 1px;
-  
-  color: #212121;
-  
-  font-size:0.975em;
-  
-  text-align:center;
-  vertical-align:middle;
-
-  padding-left:6.66%;
-  width:30%;
-}
-
-.content-cat p {
-  font-size:0.55em;
-  font-weight:600;
-  
-  margin-bottom:0;
-}
-
-.content-text {
-  border-left:1px solid #e0e0e0;
-  transition: border 0.66s ease-in;
-}
-
-.big-text {
-  vertical-align:top;
-}
-
-.content-text ul {
-  padding:0;
-  margin:0;
-  margin-top:0.15em;
-  
-  width:85%;
-  margin-left:1.5em;
-}
+	<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	
+	<title>Brandon Dao</title>
 
-.content-text ul:last-child {
-  margin-bottom:0.5em;
+	<style>
+	body {
+	background: #fff;
+	font: 16px 'Open Sans', Helvetica, Arial, sans-serif;
+	line-height: 1.4;
+	margin: 0 0;
+	margin-bottom: 100px;
 }
-
-.content-text ul li {
-  font-family: "Open Sans";
-  font-size:0.7em;
-  
-  display:inline-block;
-  
-}
-
-.content-text ul li:first-child {
-  width:35%;
-  
-  color: #424242;
-  
-  font-weight:600;
-}
-
-.content-text ul li a, div.content-text.work-listing.education-listing > p > strong > a {
-  text-decoration: none;
-  color: #0277bd;
-}
-
-.content-text ul li a:hover {
-  color:#4fc3f7;
-}
-
-.work-listing p {
-  font-family: "Open Sans";
-  font-size:0.7em;
-  
-  color: #424242;
-  
-  margin-left:2em;
-  margin-top:0.45em;
-  margin-bottom: 0.45em;
-}
-
-div.content-text.work-listing.education-listing > p:nth-child(2) {
-  margin-top:0.25em;
-}
-
-.work-listing .highlight {
-  font-family: "Open Sans";
-  font-size:0.7em;
-  font-weight:400;
-  
-  color: #424242;
-  
-  margin-left:3.25em;
-  padding-left:0.5em;
-  
-  border-left:1px solid #e0e0e0;
-  
-}
-
-.education-listing > .heading {
-  font-weight:600;
-  
-  margin-top:0.75em;
-  margin-left:2em;
-}
-
-.education-listing > .highlight {
-  margin-left:3.25em;
-}
-
-.highlight {
-  transition: border .33s ease-in;
-}
-
-.profiles-listing ul li, .profiles-listing ul li:first-child {
-  width:32%;
-  font-weight: normal;
-}
-
-.work-content, .education-content {
-  padding-top: .75em;
-}
-
-section.content.education-content > div > div.content-cat {
-  vertical-align: top;
-}
-
-div.content-text.skills-listing > p {
-  font-family: "Open Sans";
-  font-size:0.7em;
-  font-weight:400;
-
-  margin-left: 2em;
-  margin-top: 0.45em;
-  margin-bottom: 0.45em;
-}
-
-div.content-text.skills-listing > p > {
-  color:#212121;
-}
-
-@media screen and (max-width: 600px) {
-  body, html {
-    padding-top: 30px;
-  }
-
-  .paper {
-    width:95%;
-  }
-
-  .row div {
-    display: block;
-  }
-
-  .content-cat {
-    width: 100%;
-  }
-
-  .content-text ul li {
-    width: 100%;
-  }
-
-  .content-text ul li:first-child {
-    width: 100%;
-  }
-  
-  .education-listing > .highlight {
-    margin-left: 30px;
-  }
-}</style>
-  <style media="print">
-body, html {
-  background-color: white;
-  padding-top: 1.5em;
-}
-
-.paper {
-  width:100%;
-  border: 0;
-
-  padding-top: 0;
-}
-
-header p {
-  font-size: 1.3em;
-}
-
-.subtitle {
-  font-size: 0.7em;
-}
-
-.header-pic {
-  float:left;
-}
-
-.profiles {
-  display:none;
+em {
+	color: #999;
 }
-
-.content {
-  page-break-inside:avoid; 
-  page-break-after:auto;
-}
-
-.header-text {
-  float:left;
-  margin-top: -1.6em;
+p {
+	line-height: 1.6;
+	font-size: 90%;
 }
 
-.content-wrapper > .content:first-child {
-  padding-top: 2em;
+a {
+	color: #2C85B1;
+	text-decoration: none;
+	font-weight: 400;
 }
-
-.content:last-child {
-  padding-bottom: 0;
+ul {
+	margin-bottom: 0;
 }
-
-.content-cat {
-  width:33%;
-  color:black;
-  text-align: left;
+section {
+	margin: 1em 0 2em;
 }
-
-.content-cat p {
-  font-size:0.6em;
-  font-weight: 600;
+blockquote {
+	margin: 0;
+	margin-bottom: 1em;
 }
-
-header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
-  color:black;
+#resume {
+	margin: 2em 2em 2em 2.5em;
+	max-width: 760px;
 }
 
-.content-text.skills-listing > ul > li span, .subtitle {
-  color:#212121;
-}
+/* Resume heading */
+.heading header { 
 
-.content-text ul:last-child {
-  margin-bottom: 0.25em;
 }
 
-.content-text ul li:first-child {
-  width:50%;
+.heading header h1 {
+	font-size: 180%;
+	margin: 0.5em 0;
+	font-weight: 600;
 }
 
-.profiles-listing ul li:first-child {
-  width:32%;
+.heading header h2 {
+	font-size: 140%;
+	margin: 0;
+	font-weight: 400;
 }
 
-div.content-text.skills-listing > ul > li {
-  width:33%;
+.heading header .contact .detail {
+	margin: 0 1em 0 0;
 }
 
-.work-listing p {
-  margin-bottom: 0.1em;
+.profile {
+	display: inline-block;
+	margin: 0 1em 0 0;
 }
 
-div.content-text.skills-listing > ul > li > p {
-  margin-top: 0.4em;
-  margin-bottom: 0.5em;
+.profile strong,
+.profile span {
+	display: inline-block;
+	margin: 0 1em 0 0;
 }
-
-div.content-text.skills-listing > ul > li {
-  padding-left: 1.5em;
+/* section / line breaks */
+section h2 {
+	font-size: 140%;
+	margin: 0 0 1em;
+	text-transform: uppercase;
+	color: #BC1B39;
+	font-weight: 400;
 }
 
-div.content-text.skills-listing > ul > li:first-child {
-  padding-left: 2em;
+/* Experience items */
+.item {
+	margin: 0 0 1em;
+	padding: 0 0 1em;
+	border-bottom: 1px solid #F2EBEC;
 }
 
-.note {
-  display:none;
+.item:last-child {
+	border-bottom: none;
 }
 
-.content-text:hover {
-  border-left:1px solid #eeeeee;
-}
 
-.content-text ul li a:hover {
-  color:#4fc3f7;
+.item header h3 {
+	margin: 0.2em 1em 0.2em 0;
+	display: inline-block;
+	font-weight: 600;
 }
 
-.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
-  border-left:1px solid #eeeeee;
+.item header a {
+	display: inline-block;
 }
 
-.big-text {
-  padding-top: 0;
-}</style>
-</head>
-<body>
-  <div class="resume-wrapper">
-    <article class="paper">
-        <header>
-          <div class="header-content">
-            <div class="header-text">
-              <p>
-                Brandon Dao
-              </p>
-              <p class="subtitle">Software Developer</p>
-            </div>
-          </div>
-        </header>
-        <div class="content-wrapper">
-          <!-- CONTACT -->
-          <section class="content">
-            <div class="row">
-              <div class="content-cat">
-                Contact
-              </div>
-              <div class="content-text">
-                  <ul>
-                    <li>Website</li>
-                    <li>https://daosyn.info</li>
-                  </ul>
-                  <ul>
-                    <li>Email</li>
-                    <li>daosyn@gmail.com</li>
-                  </ul>
-                  <ul>
-                    <li>Phone</li>
-                    <li>(815) 608-7276</li>
-                  </ul>
-              </div>
-            </div>
-          </section>
-          <!-- LOCATION -->
-              <section class="content">
-                <div class="row">
-                  <div class="content-cat">
-                    Location
-                  </div>
-                  <div class="content-text">
-                      <ul>
-                        <li>Address</li>
-                        <li>736 Bode Circle</li>
-                      </ul>
-                        <ul>
-                          <li>Postal Code & City</li>
-                          <li>60169 Hoffman Estates</li>
-                        </ul>
-                      <ul>
-                        <li>Region</li>
-                        <li>Illinois</li>
-                      </ul>
-                  </div>
-                </div>
-              </section>
-        
-                <section class="content">
-                  <div class="row">
-                    <div class="content-cat big-text">
-                        Work  Experience
-                          <p>17 January 2017 till present</p>
-                    </div>
-                    <div class="content-text work-listing education-listing">
-                          <p style="margin-top:2.4em;">
-                          <strong>Associate Software Engineer</strong>
-                          at <strong><a href="https://capitalone.com">Capital One:</a></strong>
-                        </p>
-                          <p class="highlight">Build an algorithm for artist to detect if their music was violating copy right infringement laws</p>
-                          <p class="highlight">Successfully won Techcrunch Disrupt</p>
-                          <p class="highlight">Optimized an algorithm that holds the current world record for Weisman Scores</p>
-                    </div>
-                  </div>
-                </section>
-                <section class="content work-content">
-                  <div class="row">
-                    <div class="content-cat big-text">
-                          <p>10 October 2016 till present</p>
-                    </div>
-                    <div class="content-text work-listing education-listing">
-                          <p>
-                          <strong>Software Developer</strong>
-                          at <strong><a href="https://revature.com">Revature:</a></strong>
-                        </p>
-                          <p class="highlight">Build an algorithm for artist to detect if their music was violating copy right infringement laws</p>
-                          <p class="highlight">Successfully won Techcrunch Disrupt</p>
-                          <p class="highlight">Optimized an algorithm that holds the current world record for Weisman Scores</p>
-                    </div>
-                  </div>
-                </section>
-
-
-                <section class="content">
-                  <div class="row">
-                    <div class="content-cat big-text">
-                        Education
-                          <p>2011 till 2015</p>
-                    </div>
-                    <div class="content-text work-listing education-listing">
-                          <p class="heading" style="margin-top:2.35em;">University of Illinois at Urbana-Champaign</p>
-                        <p class="highlight">
-                          Bachelor of Science:
-                          <i>Computer Engineering </i>
-                        </p>
-                    </div>
-                  </div>
-                </section>
-
-
-          <section class="content">
-            <div class="row">
-              <div class="content-cat">
-                Skills
-              </div>
-              <div class="content-text skills-listing">
-                  <p>
-                    <span class="name">
-                        <strong>
-                          Web Development
-                        </strong>
-                    </span>
-                      <span>(Master):</span>
-                      HTML, CSS, Javascript
-                  </p>
-                  <p>
-                    <span class="name">
-                        <strong>
-                          Compression
-                        </strong>
-                    </span>
-                      <span>(Master):</span>
-                      Mpeg, MP4, GIF
-                  </p>
-              </div>
-            </div>
-          </section>
-
-  <!-- LANGUAGE -->
-            <section class="content">
-              <div class="row">
-                <div class="content-cat">
-                  Languages
-                </div>
-                <div class="content-text">
-                    <ul>
-                        <li>English</li>
-                        <li>native speaker</li>
-                    </ul>
-                </div>
-              </div>
-            </section>
-            <!-- PROFILES -->
-              <section class="content profiles">
-                <div class="row">
-                  <div class="content-cat">
-                    Profiles
-                  </div>
-                  <div class="content-text profiles-listing">
-                    <ul>
-                          <li>
-                            <a href="https://twitter.com/daosyn" target="_blank">
-                              Twitter
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://github.com/daosyn" target="_blank">
-                              GitHub
-                            </a>
-                          </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-
-            <section class="content">
-              <div class="row">
-                <div class="content-cat">
-                  Interests
-                </div>
-                <div class="content-text skills-listing">
-                    <p>
-                      <span class="name">
-                          <strong>
-                            Wildlife:
-                          </strong>
-                      </span>
-                        Ferrets, Unicorns
-                    </p>
-                </div>
-              </div>
-            </section>
-
-        </div>
-    </article>
-  </div>
-</body>
+.item .position {
+	font-weight: 600;
+	font-size: 100%;
+	margin: 0.2em 1em 0.2em 0;
+}
+
+.item .startDate,
+.item .endDate {
+	color: #6B6B6B;
+}
+
+.item .highlights {
+	list-style: square;
+	font-size: 90%;
+}
+
+/* skills */
+#skills .item {
+	margin: 0.5em 0;
+	padding: 0 0 0.5em;
+	font-size: 90%;
+}
+
+#skills .item .name {
+	font-weight: 600;
+	display: inline-block;
+	text-transform: uppercase;
+	margin: 0 1em 0 0;
+	width: 23%;
+	vertical-align: top;
+}
+
+#skills .item .keywords {
+	display: inline-block;
+	width: 70%;
+	vertical-align: top;
+}
+
+/* education */
+#education .item {
+	display: inline-block;
+	vertical-align: top;
+	width: 49.5%;
+	border-bottom: 0;
+}
+
+
+
+	</style>
+	<style media="print">
+		body { font-size: 12px; }
+	</style>
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+	
+	</head>
+	<body>
+	
+	<div id="resume">
+
+	<section class="heading">
+		<header>
+			<h1>Brandon Dao</h1>
+			<div class="contact">
+				<span class="detail">
+					<a href="mailto:daosyn@gmail.com">daosyn@gmail.com</a>
+				</span>
+				<span class="detail">
+					+1 (815) 608-7276
+				</span>
+				<span class="detail">
+					<a href="https://daosyn.info">https://daosyn.info</a>
+				</span>
+			</div>
+		</header>
+
+
+		<p><p>I am a software engineer with a particular interest in making things simple and automating daily tasks. I try to keep up with security and best practices, and am always looking for new things to learn.</p></p>
+
+			<div class="profile">
+				<strong class="network">
+					GitHub
+				</strong>
+				<span class="username">
+					<a href="https://github.com/daosyn">@daosyn</a>
+				</span>
+			</div>
+
+	</section>
+
+	<section id="skills">
+		<h2>Skills</h2>
+		<div class="item">
+			<div class="name">
+				Programming Languages
+			</div>
+			<div class="keywords">
+					Java,
+					Go,
+					Python,
+					TypeScript,
+					JavaScript,
+					C++,
+					C
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Web Development
+			</div>
+			<div class="keywords">
+					Angular,
+					Node.js,
+					HTML,
+					CSS
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				DevOps
+			</div>
+			<div class="keywords">
+					Jenkins,
+					Docker,
+					AWS
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Command Line
+			</div>
+			<div class="keywords">
+					Git,
+					Bash
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Operating Systems
+			</div>
+			<div class="keywords">
+					Linux,
+					BSD,
+					macOS,
+					Windows
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Databases
+			</div>
+			<div class="keywords">
+					PostgreSQL,
+					MongoDB
+			</div>
+		</div>
+	</section>
+
+	<section class="experience">
+		<h2>Experience</h2>
+		<section class="item">
+			<header>
+					<h3 class="name">Capital One</h3>
+			</header>
+			<span class="position">
+				Associate Software Engineer
+			</span>
+
+			<span class="startDate">
+				Jan 2017
+			</span>
+			<span class="endDate">
+				- Present
+			</span>
+
+			<div class="summary">
+				<p><p>I joined at the start of the year as part of an Agile team that would deliver intent for co-branding partnerships with companies such as Costco Canada, General Motors, Union Plus, Bass Pro, and Cabela's. I technically started as a contractor in January and was hired as a full time associate six months later.</p></p>
+			</div>
+			<ul class="highlights">
+				<li>Built microservices in Java with Spring Boot that listen RabbitMQ queues and later Kafka topics</li>
+				<li>Developed for a web application using Node.js to build APIs that present data to a front end powered by Angular</li>
+				<li>Contributed to inner source projects while collaborating with Agile team to deliver main intent</li>
+				<li>Continually integrated via reviewed GitHub pull requests and deployed services through Jenkins onto AWS</li>
+			</ul>
+		</section>
+		<section class="item">
+			<header>
+					<h3 class="name">Revature</h3>
+			</header>
+			<span class="position">
+				Software Developer
+			</span>
+
+			<span class="startDate">
+				Oct 2016
+			</span>
+			<span class="endDate">
+				- Jan 2017
+			</span>
+
+			<div class="summary">
+				<p><p>I had fallen right into this company's arms because, admittedly, I was lazy in school and neglected to network and gain solid internship experience. Despite their reputation, Revature provides great training and was the proverbial foot in the door that I sorely needed.</p></p>
+			</div>
+			<ul class="highlights">
+				<li>Learned and practiced industry standards in a classroom environment</li>
+				<li>Developed multiple small practice projects with an Agile team using a modern tech stack including Java, Spring, jQuery, Jenkins, AWS, and GitLab to build and deploy</li>
+			</ul>
+		</section>
+	</section>
+
+	
+	<section id="education">
+		<h2>Education</h2>
+		<div class="item">
+			<header>
+					<h3 class="name">University of Illinois at Urbana-Champaign</h3>
+			</header>
+
+			<div class="dates">
+				<span class="startDate">
+					Aug 2011
+				</span>
+				<span class="endDate">
+					- May 2015
+				</span>
+			</div>
+
+			<div class="qualification">
+				<span class="studyType">
+					Bachelor of Science
+				</span>
+
+				<span class="area">
+					- Computer Engineering
+				</span>
+
+			</div>
+
+		</div>
+	</section>
+	
+	
+
+	<section id="languages">
+		<h2>Languages</h2>
+		<div class="item">
+			<div class="language">
+				English
+			</div>
+			<div class="fluency">
+				<em>native speaker</em>
+			</div>
+		</div>
+		<div class="item">
+			<div class="language">
+				Vietnamese
+			</div>
+			<div class="fluency">
+				<em>elementary</em>
+			</div>
+		</div>
+	</section>
+
+	<section id="interests">
+		<h2>Interests</h2>
+		<div class="item">
+			<div class="name">
+				Rubik&#x27;s Cubes
+			</div>
+			<ul class="keywords">
+				<li>speedsolving</li>
+				<li>computer-generated solves</li>
+			</ul>
+		</div>
+	</section>
+	
+	
+	</div>
+	
+	</body>
 </html>
