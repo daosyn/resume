@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Brandon Dao",
-    "label": "Software Developer",
+    "label": "Software Engineer",
     "email": "daosyn@gmail.com",
     "phone": "+1 (815) 608-7276",
     "website": "https://daosyn.info",
@@ -13,13 +13,21 @@
       "countryCode": "US",
       "region": "Illinois"
     },
-    "profiles": [{
-      "network": "GitHub",
-      "username": "@daosyn",
-      "url": "https://github.com/daosyn"
-    }]
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "@daosyn",
+        "url": "https://github.com/daosyn"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "https://www.linkedin.com/in/daosyn",
+        "url": "https://www.linkedin.com/in/daosyn"
+      }
+    ]
   },
-  "work": [{
+  "work": [
+    {
       "company": "Capital One",
       "position": "Associate Software Engineer",
       "website": "https://capitalone.com",
@@ -44,28 +52,29 @@
       ]
     }
   ],
-  "education": [{
-    "institution": "University of Illinois at Urbana-Champaign",
-    "area": "Computer Engineering",
-    "studyType": "Bachelor of Science",
-    "startDate": "2011-08-10",
-    "endDate": "2015-05-10",
-    "courses": [
-      "ECE 411 - Computer Organization and Design",
-      "ECE 391 - Computer Systems Engineering",
-      "CS 463 - Computer Security II",
-      "CS 460 - Computer Security Lab",
-      "CS 225 - Data Structures"
-    ]
-  }],
-  "skills": [{
+  "education": [
+    {
+      "institution": "University of Illinois at Urbana-Champaign",
+      "area": "Computer Engineering",
+      "studyType": "Bachelor of Science",
+      "startDate": "2011-08-10",
+      "endDate": "2015-05-10",
+      "courses": [
+        "ECE 411 - Computer Organization and Design",
+        "ECE 391 - Computer Systems Engineering",
+        "CS 463 - Computer Security II",
+        "CS 460 - Computer Security Lab",
+        "CS 225 - Data Structures"
+      ]
+    }
+  ],
+  "skills": [
+    {
       "name": "Programming Languages",
       "keywords": [
         "Java",
         "Go",
         "Python",
-        "TypeScript",
-        "JavaScript",
         "C++",
         "C"
       ]
@@ -75,6 +84,8 @@
       "keywords": [
         "Angular",
         "Node.js",
+        "TypeScript",
+        "JavaScript",
         "HTML",
         "CSS"
       ]
@@ -106,12 +117,8 @@
       ]
     }
   ],
-  "languages": [{
-      "language": "English",
-      "fluency": "native speaker"
-    }
-  ],
-  "interests": [{
+  "interests": [
+    {
       "name": "Rubik's Cubes",
       "keywords": [
         "speedsolving",
