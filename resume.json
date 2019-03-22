@@ -2,14 +2,14 @@
   "basics": {
     "name": "Brandon Dao",
     "label": "Software Engineer",
-    "email": "daosyn@gmail.com",
+    "email": "brandon@daosyn.info",
     "phone": "+1 (815) 608-7276",
-    "website": "https://daosyn.info",
+    "website": "https://daosyn.info/about",
     "summary": "I am a software engineer with a particular interest in making things simple and automating daily tasks. I try to keep up with security and best practices, and am always looking for new things to learn.",
     "location": {
-      "address": "736 Bode Circle",
-      "postalCode": "60169",
-      "city": "Hoffman Estates",
+      "address": "200 E Randolph St",
+      "postalCode": "60601",
+      "city": "Chicago",
       "countryCode": "US",
       "region": "Illinois"
     },
@@ -28,14 +28,22 @@
   },
   "work": [
     {
+      "company": "Slalom",
+      "position": "Consultant",
+      "website": "https://www.slalom.com",
+      "startDate": "2019-04-02",
+      "summary": "I am working with clients to fulfill their business needs and requirements by building out great user experiences."
+    },
+    {
       "company": "Capital One",
       "position": "Associate Software Engineer",
       "website": "https://capitalone.com",
       "startDate": "2017-01-17",
-      "summary": "I joined at the start of the year as part of an Agile team that would deliver intent for co-branding partnerships with companies such as Costco Canada, General Motors, Union Plus, Bass Pro, and Cabela's. I technically started as a contractor in January and was hired as a full-time associate six months later.",
+      "endDate": "2019-03-21",
+      "summary": "I worked mainly on the agent servicing platform, building out user experiences as well as backends powering critical workflows.",
       "highlights": [
-        "Built microservices in Java with Spring Boot that listen to RabbitMQ queues and Kafka topics",
-        "Developed for a web application using Node.js to build APIs that present data to a front end powered by Angular",
+        "Built microservices in Java with Spring Boot that listen to RabbitMQ queues and Kafka topics to handle real-time processes",
+        "Developed web applications using Node.js to build APIs that present data to a front ends powered by Angular and Vue",
         "Contributed to inner source projects while collaborating with Agile team to deliver main intent"
       ]
     },
@@ -45,26 +53,10 @@
       "website": "https://revature.com",
       "startDate": "2016-10-10",
       "endDate": "2017-01-14",
-      "summary": "I had fallen right into this company's arms because, admittedly, I was lazy in school and neglected to network and gain solid internship experience. Despite their reputation, Revature provides great training and was the proverbial foot in the door that I sorely needed.",
+      "summary": "I partook in a ten week training program that brought me up to speed with the tools and frameworks that companies use on a day-to-day basis.",
       "highlights": [
         "Learned and practiced industry standards in a classroom environment",
         "Developed multiple small practice projects with an Agile team using a modern tech stack including Java, Spring, jQuery, Jenkins, AWS, and GitLab to build and deploy"
-      ]
-    }
-  ],
-  "education": [
-    {
-      "institution": "University of Illinois at Urbana-Champaign",
-      "area": "Computer Engineering",
-      "studyType": "Bachelor of Science",
-      "startDate": "2011-08-10",
-      "endDate": "2015-05-10",
-      "courses": [
-        "ECE 411 - Computer Organization and Design",
-        "ECE 391 - Computer Systems Engineering",
-        "CS 463 - Computer Security II",
-        "CS 460 - Computer Security Lab",
-        "CS 225 - Data Structures"
       ]
     }
   ],
@@ -75,6 +67,8 @@
         "Java",
         "Go",
         "Python",
+        "JavaScript",
+        "TypeScript",
         "C++",
         "C"
       ]
@@ -83,9 +77,8 @@
       "name": "Web Development",
       "keywords": [
         "Angular",
+        "Vue.js",
         "Node.js",
-        "TypeScript",
-        "JavaScript",
         "HTML",
         "CSS"
       ]
@@ -117,20 +110,21 @@
       ]
     }
   ],
-  "interests": [
+  "education": [
     {
-      "name": "Rubik's Cubes",
-      "keywords": [
-        "speedsolving",
-        "computer-generated solves"
-      ]
-    },
-    {
-      "name": "open authentication standards",
-      "keywords": [
-        "U2F",
-        "FIDO2"
+      "institution": "University of Illinois at Urbana-Champaign",
+      "area": "Computer Engineering",
+      "studyType": "Bachelor of Science",
+      "startDate": "2011-08-10",
+      "endDate": "2015-05-10",
+      "courses": [
+        "ECE 411 - Computer Organization and Design",
+        "ECE 391 - Computer Systems Engineering",
+        "CS 463 - Computer Security II",
+        "CS 460 - Computer Security Lab",
+        "CS 225 - Data Structures"
       ]
     }
   ]
 }
+
